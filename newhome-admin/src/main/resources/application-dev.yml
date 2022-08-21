@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: newhome
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://@localhost.ip@:3306/newhome?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: zhuang
+  mail:
+    host: smtp.qq.com
+    username: 753548402@qq.com
+    password: docbwuhosuknbdde
+
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    # 驼峰命名法
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+  mapper-locations: classpath:com/roy/mapper/*Mapper.xml
+#  type-aliases-package: classpath:/com/roy/pojo
+
+newhome:
+  path: E:\Download\temp\
+#  path: E:\Download\temp
